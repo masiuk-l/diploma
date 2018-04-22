@@ -1,0 +1,133 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          version="2.0" xmlns:spring="http://www.springframework.org/tags">
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/main/">
+            <spring:message code="menu.name"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse">
+            <span class="navbar-toggler-icon"/>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <c:choose>
+                    <c:when test="${pageName eq 'catalog'}">
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                               href="${pageContext.request.contextPath}/book/">
+                                <spring:message code="menu.catalog"/>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="${pageContext.request.contextPath}/book/">
+                                <spring:message code="menu.catalog"/>
+                            </a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+
+                <c:choose>
+                    <c:when test="${pageName eq 'about'}">
+                        <li class="nav-item active">
+                            <a class="nav-link"
+                               href="${pageContext.request.contextPath}/about/">
+                                <spring:message code="about.title"/>
+                            </a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="${pageContext.request.contextPath}/about/">
+                                <spring:message code="about.title"/>
+                            </a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+
+                <c:set var="locale" value="${request.LOCALE.language}"/>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        <spring:message code="menu.language"/>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="?locale=ru">Русский</a>
+                        <a class="dropdown-item" href="?locale=en">English</a>
+                    </div>
+                </li>
+
+                <c:choose>
+                    <c:when test="${not empty sreader}">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown">
+                                <spring:message code="menu.hello"/>, ${sreader.name}!
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/reader/edit/${sreader.readerID}">
+                                    <spring:message code="menu.edit"/>
+                                </a>
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/book/myBooks">
+                                    <spring:message code="mybooks.title"/>
+                                </a>
+                                <a class="divider"/>
+
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/login/logout">
+                                    <spring:message code="menu.logout"/>
+                                </a>
+                            </div>
+                        </li>
+                    </c:when>
+                    <c:when test="${not empty slibrarian}">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                               data-toggle="dropdown">
+                                <spring:message code="menu.hello"/>, ${slibrarian.name}!
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/book/add">
+                                    <spring:message code="admin.add.book"/>
+                                </a>
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/reader/all">
+                                    <spring:message code="readers.title"/>
+                                </a>
+                                <a class="dropdown-item"
+                                   href="${pageContext.request.contextPath}/login/logout">
+                                    <spring:message code="menu.logout"/>
+                                </a>
+                            </div>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item navbar-right">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/login/">
+                                <spring:message code="menu.signin"/>
+                            </a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
+
+            </ul>
+            <div class="navbar-nav ">
+                <form class="form-inline mt-2 mt-md-0" action="${pageContext.request.contextPath}/book/search"
+                      method="post">
+                    <input class="form-control mr-sm-2" type="text" required="" pattern=".{3,30}" name="name"/>
+                    <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><spring:message
+                            code="searchcatalog.title"/></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+</jsp:root>
