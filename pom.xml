@@ -27,7 +27,7 @@
 
     </properties>
     <build>
-        <finalName>newlibrary</finalName>
+        <finalName>diploma</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -36,7 +36,7 @@
                 <configuration>
                     <url>http://localhost/manager/text</url>
                     <port>80</port>
-                    <path>/newlibrary</path>
+                    <path>/diploma</path>
                     <server>tomcatserver</server>
                     <username>admin</username>
                     <password>admin</password>

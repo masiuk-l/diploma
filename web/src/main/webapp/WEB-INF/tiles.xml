@@ -5,7 +5,7 @@
 <tiles-definitions>
     <definition name="default" template="/WEB-INF/view/layouts/default.jspx">
         <put-attribute name="title" value="MVC"/>
-        <put-attribute name="header" value="/WEB-INF/tags/common/header-navigation.tagx"/>
+        <put-attribute name="header" value="/WEB-INF/view/common/header.jsp"/>
         <put-attribute name="body" value=""/>
         <put-attribute name="footer" value="/WEB-INF/view/common/footer.jspx"/>
     </definition>
