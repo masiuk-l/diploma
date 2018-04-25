@@ -21,7 +21,7 @@
                     <a href="checkout.html">
                         <h3><span class="simpleCart_total"> $0.00 </span> (<span id="simpleCart_quantity"
                                                                                  class="simpleCart_quantity"> 0 </span>)<img
-                                src="images/bag.png" alt=""></h3>
+                                src="${pageContext.request.contextPath}images/bag.png" alt=""></h3>
                     </a>
                     <p><a href="javascript:;" class="simpleCart_empty"><spring:message code="menu.empty_cart"/></a></p>
                     <div class="clearfix"></div>
@@ -51,114 +51,26 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="${pageContext.request.contextPath}/book/"><spring:message code="menu.catalog"/></a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
+                        <a href="${pageContext.request.contextPath}/book/" class="dropdown-toggle" data-toggle="dropdown"><spring:message code="catalog.header"/><b class="caret"></b></a>
                         <ul class="dropdown-menu multi-column columns-3">
                             <div class="row">
                                 <div class="col-sm-4">
                                     <ul class="multi-column-dropdown">
-                                        <h6>NEW IN</h6>
-                                        <li><a href="products.html">New In Clothing</a></li>
-                                        <li><a href="products.html">New In Bags</a></li>
-                                        <li><a href="products.html">New In Shoes</a></li>
-                                        <li><a href="products.html">New In Watches</a></li>
-                                        <li><a href="products.html">New In Grooming</a></li>
+                                        <h6><spring:message code="catalog.cat1"/></h6>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat1"/></a></li>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat2"/></a></li>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat3"/></a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-4">
                                     <ul class="multi-column-dropdown">
-                                        <h6>CLOTHING</h6>
-                                        <li><a href="products.html">Polos & Tees</a></li>
-                                        <li><a href="products.html">Casual Shirts</a></li>
-                                        <li><a href="products.html">Casual Trousers</a></li>
-                                        <li><a href="products.html">Jeans</a></li>
-                                        <li><a href="products.html">Shorts & 3/4th</a></li>
-                                        <li><a href="products.html">Formal Shirts</a></li>
-                                        <li><a href="products.html">Formal Trousers</a></li>
-                                        <li><a href="products.html">Suits & Blazers</a></li>
-                                        <li><a href="products.html">Track Wear</a></li>
-                                        <li><a href="products.html">Inner Wear</a></li>
+                                        <h6><spring:message code="catalog.cat2"/></h6>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat1"/></a></li>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat2"/></a></li>
+                                        <li><a href="products.html"><spring:message code="catalog.subcat4"/></a></li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>WATCHES</h6>
-                                        <li><a href="products.html">Analog</a></li>
-                                        <li><a href="products.html">Chronograph</a></li>
-                                        <li><a href="products.html">Digital</a></li>
-                                        <li><a href="products.html">Watch Cases</a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">women <b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-column columns-3">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>NEW IN</h6>
-                                        <li><a href="products.html">New In Clothing</a></li>
-                                        <li><a href="products.html">New In Bags</a></li>
-                                        <li><a href="products.html">New In Shoes</a></li>
-                                        <li><a href="products.html">New In Watches</a></li>
-                                        <li><a href="products.html">New In Beauty</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>CLOTHING</h6>
-                                        <li><a href="products.html">Polos & Tees</a></li>
-                                        <li><a href="products.html">Casual Shirts</a></li>
-                                        <li><a href="products.html">Casual Trousers</a></li>
-                                        <li><a href="products.html">Jeans</a></li>
-                                        <li><a href="products.html">Shorts & 3/4th</a></li>
-                                        <li><a href="products.html">Formal Shirts</a></li>
-                                        <li><a href="products.html">Formal Trousers</a></li>
-                                        <li><a href="products.html">Suits & Blazers</a></li>
-                                        <li><a href="products.html">Track Wear</a></li>
-                                        <li><a href="products.html">Inner Wear</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>WATCHES</h6>
-                                        <li><a href="products.html">Analog</a></li>
-                                        <li><a href="products.html">Chronograph</a></li>
-                                        <li><a href="products.html">Digital</a></li>
-                                        <li><a href="products.html">Watch Cases</a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">kids <b class="caret"></b></a>
-                        <ul class="dropdown-menu multi-column columns-2">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>NEW IN</h6>
-                                        <li><a href="products.html">New In Boys Clothing</a></li>
-                                        <li><a href="products.html">New In Girls Clothing</a></li>
-                                        <li><a href="products.html">New In Boys Shoes</a></li>
-                                        <li><a href="products.html">New In Girls Shoes</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="multi-column-dropdown">
-                                        <h6>ACCESSORIES</h6>
-                                        <li><a href="products.html">Bags</a></li>
-                                        <li><a href="products.html">Watches</a></li>
-                                        <li><a href="products.html">Sun Glasses</a></li>
-                                        <li><a href="products.html">Jewellery</a></li>
-                                    </ul>
-                                </div>
-                                <div class="clearfix"></div>
                             </div>
                         </ul>
                     </li>

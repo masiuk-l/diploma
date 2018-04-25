@@ -7,7 +7,7 @@
         <put-attribute name="title" value="MVC"/>
         <put-attribute name="header" value="/WEB-INF/view/common/header.jsp"/>
         <put-attribute name="body" value=""/>
-        <put-attribute name="footer" value="/WEB-INF/view/common/footer.jspx"/>
+        <put-attribute name="footer" value="/WEB-INF/view/common/footer.jsp"/>
     </definition>
 
     <definition name="about" extends="default">
